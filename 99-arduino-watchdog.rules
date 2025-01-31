@@ -1,0 +1,2 @@
+ACTION=="remove", SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", RUN+="/bin/rm -f /dev/arduino_watchdog"
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="arduino_watchdog", MODE="0666"

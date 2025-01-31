@@ -1,0 +1,15 @@
+[Unit]
+Description=Keep Alive para Arduino Watchdog
+Wants=dev-arduino_watchdog.device
+After=dev-arduino_watchdog.device
+
+[Service]
+ExecStart=/usr/local/bin/keep_alive.sh
+Restart=always
+RestartSec=5
+User=root
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=sysinit.target
